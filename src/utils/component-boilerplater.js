@@ -95,7 +95,8 @@ async function processDirectory(dirPath, level = 0) {
 
                     await Promise.all([
                         fs.writeFile(path.resolve(itemPath, `${componentName}.tsx`), componentContent),
-                        fs.writeFile(path.resolve(itemPath, "index.ts"), indexContent)
+                        fs.writeFile(path.resolve(itemPath, "index.ts"), indexContent),
+                        // fs.writeFile(path.resolve(itemPath, `${componentName}.module.css`), indexContent),
                     ]);
 
                     console.log(`${indent}✅ Generado componente: ${componentName}`);
