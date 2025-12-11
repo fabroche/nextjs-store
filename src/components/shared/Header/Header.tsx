@@ -17,6 +17,11 @@ export function Header() {
                             Store
                         </Link>
                     </li>
+                    <li>
+                        <Link href={"/test"}>
+                            Test
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

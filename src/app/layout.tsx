@@ -1,4 +1,4 @@
-import {Geist, Geist_Mono, Roboto} from "next/font/google";
+import {Roboto} from "next/font/google";
 import {Header} from "@/components/shared/Header";
 import {Footer} from "@/components/shared/Footer";
 import "@/sass/globals.sass";

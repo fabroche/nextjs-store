@@ -19,8 +19,8 @@ export function Description() {
         'Description__button--border': hasBorder,
     })
 
-    console.log(hasBorder)
-    console.log(buttonStyles)
+    // console.log(hasBorder)
+    // console.log(buttonStyles)
 
     return (
         <section className={styles.Description}>

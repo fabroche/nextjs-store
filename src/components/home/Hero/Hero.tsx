@@ -1,7 +1,6 @@
 import styles from "./Hero.module.sass";
 
 export function Hero() {
-    console.log(styles)
 
     return (
         <section className={styles.Hero}>
