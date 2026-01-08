@@ -1,17 +1,17 @@
 import styles from "./MainProducts.module.sass";
 import Image from "next/image";
 import {Logger} from "sass";
+import {getMainProducts} from "@/services/shopify/products";
 
 export async function MainProducts() {
 
-    const response = await fetch("http://localhost:3000/api/products"    )
-    const {products} = await response.json()
+    const products = await getMainProducts()
 
     return (
         <section className={styles.MainProducts}>
             <h3>✨ New products released!</h3>
             <div className={styles.MainProducts__grid}>
-                {products.map((product) => {
+                {products.map(product => {
                     const imageSrc = product.images[0].src;
                     return (
                         <article key={product.id}>

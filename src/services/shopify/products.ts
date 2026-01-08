@@ -38,3 +38,20 @@ export async function getProducts(id?: string): Promise<ProductType[]> {
         console.log(error)
     }
 }
+
+export const getMainProducts = async () => {
+    const response = await fetch(shopifyUrls.products.mainProducts, {
+        headers: new Headers({
+            'X-Shopify-Access-Token': env.SHOPIFY_API_KEY
+        }),
+        next: {
+            revalidate: 60
+        }
+    })
+
+    const {products} = await response.json()
+
+    console.log(products)
+
+    return products
+}
